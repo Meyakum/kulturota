@@ -2,7 +2,31 @@
 
 @variant dark (&:where(.dark, .dark *));
 
-/* Map ve genel düzeltmeler */
 html, body, #root {
   height: 100%;
 }
+
+/* Leaflet cluster overrides */
+.marker-cluster-small { background-color: rgba(99,102,241,0.3); }
+.marker-cluster-small div { background-color: rgba(99,102,241,0.7); color: white; font-weight: 700; }
+.marker-cluster-medium { background-color: rgba(124,58,237,0.3); }
+.marker-cluster-medium div { background-color: rgba(124,58,237,0.7); color: white; font-weight: 700; }
+.marker-cluster-large { background-color: rgba(79,70,229,0.3); }
+.marker-cluster-large div { background-color: rgba(79,70,229,0.7); color: white; font-weight: 700; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(99,102,241,0.4); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(99,102,241,0.7); }
+
+/* Leaflet popup */
+.leaflet-popup-content-wrapper {
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.leaflet-popup-content { margin: 14px 16px !important; }
+
+/* Smooth transitions */
+* { box-sizing: border-box; }
